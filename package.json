@@ -6,6 +6,7 @@
   "description": "Workstyle 토큰, 화면 스타일, Vue 킷.",
   "exports": {
     ".": "./src/index.ts",
+    "./colors.css": "./src/colors.css",
     "./tokens.css": "./src/tokens.css",
     "./ds.css": "./src/ds.css"
   },

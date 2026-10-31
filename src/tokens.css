@@ -1,41 +1,8 @@
 /* Workstyle 디자인 시스템 판 eb12e334 (p-axpy07 exports/tokens.json, 다크 하나).
    sea·land·land-hi·edge·on-acc 는 라이브러리 이름이고, void·area·area-hi·outline 은 같은 값의 예전 이름이다. */
+@import './colors.css';
 @font-face{font-family:"Pretendard Variable";src:url(/fonts/PretendardVariable.woff2) format("woff2");font-weight:45 920;font-style:normal;font-display:swap}
 :root{
-  --n0: #0e0f12;
-  --n1: #1e1f22;
-  --n2: #27292c;
-  --n3: #323437;
-  --n4: #3f4144;
-  --line: #2f3033;
-  --ink1: #e8e9ec;
-  --ink2: #b4b6ba;
-  --ink3: #96989d;
-  --acc: #63a0f1;
-  --acc-fill: #3270cf;
-  --acc-soft: #28313f;
-  --sel: #2d3b50;
-  --prop: #e791c2;
-  --prop-soft: #362d35;
-  --ok: #62cd94;
-  --warn: #ebb75b;
-  --bad: #f27a6d;
-  --ok-soft: #1f332a;
-  --warn-soft: #3a3121;
-  --bad-soft: #3a2422;
-  --sea: #11171b;
-  --void: var(--sea);
-  --grid: #181e23;
-  --grid-major: #20272d;
-  --link: #5b6570;
-  --hatch: #3d4a55;
-  --land: #494339;
-  --land-hi: #564f42;
-  --edge: #8b7e69;
-  --area: var(--land);
-  --area-hi: var(--land-hi);
-  --outline: var(--edge);
-  --on-acc: #ffffff;
   --space-2: 2px;
   --space-4: 4px;
   --space-6: 6px;
