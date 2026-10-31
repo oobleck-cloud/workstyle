@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // 디자인 시스템 부품 MenuItem: / 메뉴 · 고르기 목록의 한 줄(Workstyle · MenuItem). 키보드로 고른 줄은 selected
-import Icon from '../Icon.vue';
-import type { IconName } from '../../icons';
+import Icon from './Icon.vue';
+import type { IconName } from './icons';
 
 defineProps<{ icon: IconName; label: string; desc?: string; selected?: boolean }>();
 </script>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Workstyle IconShortcut. active=true(또는 수가 있으면) 강조하고 수를 붙인다
-import Icon from '../Icon.vue';
-import type { IconName } from '../../icons';
+import Icon from './Icon.vue';
+import type { IconName } from './icons';
 
 defineProps<{ icon: IconName; label: string; count?: number; active?: boolean; expanded?: boolean }>();
 </script>

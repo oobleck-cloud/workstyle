@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 디자인 시스템 부품 SpacePill: 사이드바 머리의 작업공간 알약(Workstyle · SpacePill, 스타일 ds.css)
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 
 defineProps<{ name: string; initial: string; color?: string; open?: boolean }>();
 </script>

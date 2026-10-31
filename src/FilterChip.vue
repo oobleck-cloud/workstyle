@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Workstyle FilterChip (판 eb12e334). state=applied 는 걸린 조건, state=add 는 점선 「필터」.
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 
 withDefaults(defineProps<{ state?: 'applied' | 'add'; label: string }>(), { state: 'applied' });
 const emit = defineEmits<{ remove: [] }>();

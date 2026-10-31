@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 디자인 시스템 부품 Chip: 필터 · 꼬리표(Workstyle · Chip, 스타일 ds.css). removable 이면 끝에 빼기 단추
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 
 defineProps<{ selected?: boolean; removable?: boolean }>();
 const emit = defineEmits<{ remove: [] }>();

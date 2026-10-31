@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 디자인 시스템 부품 BlockRow: 블록 한 줄(Workstyle · BlockRow). 가리키면 왼쪽에 ⊕(아래에 블록 더하기) · 끌기 손잡이(누르면 블록 메뉴)
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 
 defineProps<{ selected?: boolean; draggable?: boolean }>();
 const emit = defineEmits<{ add: []; menu: [e: MouseEvent]; dragstart: [e: DragEvent] }>();

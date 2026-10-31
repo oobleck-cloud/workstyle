@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Workstyle SelectionToolbar. kind=text 는 글 꾸미기, kind=records 는 고른 기록 도구.
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 import Button from './Button.vue';
 import IconButton from './IconButton.vue';
 

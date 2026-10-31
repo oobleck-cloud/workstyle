@@ -21,3 +21,5 @@ export { default as PageHeader } from './PageHeader.vue';
 export { headPref, headCompact } from './density';
 export { default as SettingRow } from './SettingRow.vue';
 export { default as Float } from './Float.vue';
+export { default as Icon } from './Icon.vue';
+export { ICONS, type IconName } from './icons';

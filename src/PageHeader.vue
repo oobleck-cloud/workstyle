@@ -8,10 +8,10 @@
 // tool · collection 은 경로 · 속성 줄이 없고 아이콘 28 · 제목 16, 촘촘이면 탭 · 거르기를 제목 옆 한 줄로(시안 「설정 · AI 계정 화면 개선과 머리 변형 시안」)
 // editable 이면 제목을 눌러 그 자리에서 고친다(Enter · 밖을 누르면 rename, Esc 는 그만)
 import { nextTick, onBeforeUnmount, onMounted, ref } from 'vue';
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 import PageIcon from './PageIcon.vue';
 import { headCompact as compact, watchPanel } from './density';
-import type { IconName } from '../../icons';
+import type { IconName } from './icons';
 
 const props = defineProps<{ crumbs?: string[]; icon: IconName; title: string; size?: 'lg' | 'md'; editable?: boolean; variant?: 'object' | 'tool' | 'collection' }>();
 const emit = defineEmits<{ rename: [name: string] }>();

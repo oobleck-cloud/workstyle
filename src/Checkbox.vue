@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // 디자인 시스템 부품 Checkbox(Workstyle · Checkbox)
-import Icon from '../Icon.vue';
+import Icon from './Icon.vue';
 
 const checked = defineModel<boolean>({ default: false });
 defineProps<{ label?: string }>();
