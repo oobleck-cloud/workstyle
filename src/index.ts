@@ -1,2 +1,23 @@
-/** Workstyle. 토큰과 Vue 킷은 아직 워크벤치 `ui/src/styles/tokens.css`, `ui/src/components/kit` 에 있다. */
-export const packageId = '@oobleck/workstyle' as const
+// 디자인 시스템 부품(Workstyle 판 eb12e334 와 이름 · 변형이 같다). 스타일은 ds.css
+export { default as SpacePill } from './SpacePill.vue';
+export { default as SpaceDot } from './SpaceDot.vue';
+export { default as PropertyRow } from './PropertyRow.vue';
+export { default as PageIcon } from './PageIcon.vue';
+export { default as BlockRow } from './BlockRow.vue';
+export { default as Checkbox } from './Checkbox.vue';
+export { default as TodoItem } from './TodoItem.vue';
+export { default as Callout } from './Callout.vue';
+export { default as MenuItem } from './MenuItem.vue';
+export { default as MenuLabel } from './MenuLabel.vue';
+export { default as Popover } from './Popover.vue';
+export { default as IconShortcut } from './IconShortcut.vue';
+export { default as IconButton } from './IconButton.vue';
+export { default as FilterChip } from './FilterChip.vue';
+export { default as Button } from './Button.vue';
+export { default as SelectionToolbar } from './SelectionToolbar.vue';
+export { default as Alert } from './Alert.vue';
+export { default as Chip } from './Chip.vue';
+export { default as PageHeader } from './PageHeader.vue';
+export { headPref, headCompact } from './density';
+export { default as SettingRow } from './SettingRow.vue';
+export { default as Float } from './Float.vue';

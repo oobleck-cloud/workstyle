@@ -1,3 +1,73 @@
-/* Workstyle 토큰 자리.
-   값의 정본은 아직 워크벤치 ui/src/styles/tokens.css (판 eb12e334) 이다.
-   이 파일로 옮기는 작업은 다음 단계다. */
+/* Workstyle 디자인 시스템 판 eb12e334 (p-axpy07 exports/tokens.json, 다크 하나).
+   sea·land·land-hi·edge·on-acc 는 라이브러리 이름이고, void·area·area-hi·outline 은 같은 값의 예전 이름이다. */
+@font-face{font-family:"Pretendard Variable";src:url(/fonts/PretendardVariable.woff2) format("woff2");font-weight:45 920;font-style:normal;font-display:swap}
+:root{
+  --n0: #0e0f12;
+  --n1: #1e1f22;
+  --n2: #27292c;
+  --n3: #323437;
+  --n4: #3f4144;
+  --line: #2f3033;
+  --ink1: #e8e9ec;
+  --ink2: #b4b6ba;
+  --ink3: #96989d;
+  --acc: #63a0f1;
+  --acc-fill: #3270cf;
+  --acc-soft: #28313f;
+  --sel: #2d3b50;
+  --prop: #e791c2;
+  --prop-soft: #362d35;
+  --ok: #62cd94;
+  --warn: #ebb75b;
+  --bad: #f27a6d;
+  --ok-soft: #1f332a;
+  --warn-soft: #3a3121;
+  --bad-soft: #3a2422;
+  --sea: #11171b;
+  --void: var(--sea);
+  --grid: #181e23;
+  --grid-major: #20272d;
+  --link: #5b6570;
+  --hatch: #3d4a55;
+  --land: #494339;
+  --land-hi: #564f42;
+  --edge: #8b7e69;
+  --area: var(--land);
+  --area-hi: var(--land-hi);
+  --outline: var(--edge);
+  --on-acc: #ffffff;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-float: 8px;
+  --radius-lg: 10px;
+  --row-height: 24px;
+  --control-height: 28px;
+  --control-lg: 32px;
+  --head-height: 36px;
+  --bar-height: 40px;
+  --icon-size: 16px;
+  --island-gap: 6px;
+  --pane-left: 240px;
+  --pane-right: 280px;
+  --pane-bottom: 256px;
+  /* 모션(유동 UI 공리 A5): 실제 지속 시간은 거리에서 나오고 이 셋 사이로 자른다. motion.ts 와 같은 값 */
+  --m-swift: 120ms;
+  --m-move: 200ms;
+  --m-enter: 260ms;
+  --m-ease: cubic-bezier(0.2, 0, 0, 1);
+  --m-ease-out: cubic-bezier(0, 0, 0, 1);
+  --m-ease-in: cubic-bezier(0.3, 0, 1, 1);
+  --focus-ring: 0 0 0 3px rgba(99, 160, 241, 0.16);
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --shadow-dialog: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
