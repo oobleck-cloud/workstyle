@@ -1,0 +1,12 @@
+{
+  "name": "@oobleck/workstyle",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Workstyle 토큰과 Vue 킷. 워크벤치·Seed 스튜디오·소싱 OS 가 참조한다.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens.css": "./src/tokens.css"
+  },
+  "types": "./src/index.ts"
+}
