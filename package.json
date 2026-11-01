@@ -3,24 +3,45 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Workstyle 토큰, 화면 스타일, Vue 킷.",
+  "description": "Workstyle 토큰, 화면 스타일, Vue 킷, React 킷.",
   "exports": {
     ".": "./src/index.ts",
     "./colors.css": "./src/colors.css",
     "./tokens.css": "./src/tokens.css",
-    "./ds.css": "./src/ds.css"
+    "./ds.css": "./src/ds.css",
+    "./react": "./src/react/index.ts",
+    "./react.css": "./src/react/react.css"
   },
   "types": "./src/index.ts",
   "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
     "vue": "^3.5.0"
   },
   "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
     "vue": {
       "optional": true
     }
   },
   "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "jsdom": "^25.0.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "typescript": "^5.9.3",
+    "vitest": "^3.2.7",
     "vue": "^3.5.44"
+  },
+  "scripts": {
+    "css": "node scripts/react-css.mjs",
+    "check": "node scripts/react-css.mjs --check && tsc -p tsconfig.react.json && vitest run"
   }
 }

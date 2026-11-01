@@ -1,0 +1,20 @@
+/* Workstyle React 킷 스타일. 색(../colors.css)과 ws- 를 붙인 부품 스타일(ws.css)을 불러온다.
+   부품 규칙은 @layer components 라 Tailwind 유틸리티(className)가 이긴다. Tailwind 테마와 겹치는 --radius-* 같은 이름은 :root 가 아니라 .ws-scope 안에만 둔다. 글꼴(Pretendard)은 앱이 싣는다. */
+@import '../colors.css';
+@import './ws.css';
+.ws-scope {
+  --radius-md: 6px;
+  --focus-ring: 0 0 0 3px rgba(99, 160, 241, 0.16);
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --m-swift: 120ms;
+  --m-move: 200ms;
+  --m-ease: cubic-bezier(0.2, 0, 0, 1);
+  --z-float: 1000;
+}
+@layer components {
+.ws-float { position: fixed; z-index: var(--z-float); overflow: auto; background: transparent; height: auto; }
+.ws-checkbox[aria-checked="mixed"] { border-color: var(--acc-fill); background: var(--acc-fill); }
+.ws-select { cursor: pointer; min-width: 0; }
+.ws-select.ws-sm { height: 24px; }
+.ws-select.ws-lg { height: 32px; }
+}
