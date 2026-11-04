@@ -3,7 +3,7 @@ import { act, type ReactNode } from 'react';
 import { createRoot, type Root } from 'react-dom/client';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { Button, Checkbox, Select, Switch, Tooltip } from '../src/react';
+import { Button, Checkbox, Segment, Select, Status, Stepper, Switch, Tabs, Tooltip } from '../src/react';
 
 // @ts-expect-error mjs 모듈
 import { prefixSelector, toReactCss } from '../scripts/react-css.mjs';
@@ -75,6 +75,39 @@ describe('React 킷', () => {
     fire.click(btn);
     fire.mouseDown(document.body);
     expect(document.querySelector('[role="option"]')).toBeNull();
+  });
+  it('Segment 는 고른 칸을 aria-pressed 로 알리고 누르면 값을 알린다', () => {
+    const on = vi.fn();
+    render(<Segment label="기간" size="md" options={[{ value: 'd', label: '일' }, { value: 'w', label: '주' }]} value="d" onValueChange={on} />);
+    expect(document.querySelector('[role="group"]')!.className).toBe('ws-seg ws-lg');
+    expect(byRole('button', '일')!.getAttribute('aria-pressed')).toBe('true');
+    fire.click(byRole('button', '주'));
+    expect(on).toHaveBeenCalledWith('w');
+  });
+  it('Stepper 는 min·max 안에서 더하고 빼며 끝에서 단추를 막는다', () => {
+    const on = vi.fn();
+    render(<Stepper label="인원" value={1} min={1} max={3} unit="명" onValueChange={on} />);
+    expect((byRole('button', '빼기') as HTMLButtonElement).disabled).toBe(true);
+    fire.click(byRole('button', '더하기'));
+    expect(on).toHaveBeenCalledWith(2);
+    expect(document.querySelector('.ws-unit')!.textContent).toBe('명');
+  });
+  it('Status 는 tone 색의 점과 글을 그린다', () => {
+    render(<Status tone="bad">끊김</Status>);
+    const dot = document.querySelector<HTMLElement>('.ws-status .ws-dot')!;
+    expect(dot.style.color).toBe('var(--bad)');
+    expect(document.querySelector('.ws-status')!.textContent).toBe('끊김');
+  });
+  it('Tabs 는 화살표로 옮겨 고르고 고른 탭만 포커스를 받는다', () => {
+    const on = vi.fn();
+    render(<Tabs label="보기" items={[{ value: 'a', label: '가' }, { value: 'b', label: '나', disabled: true }, { value: 'c', label: '다' }]} value="a" onValueChange={on} />);
+    const tabs = [...document.querySelectorAll<HTMLElement>('[role="tab"]')];
+    expect(tabs.map((t) => t.tabIndex)).toEqual([0, -1, -1]);
+    expect(tabs[0]!.getAttribute('aria-selected')).toBe('true');
+    fire.keyDown(document.querySelector('[role="tablist"]')!, 'ArrowRight');
+    expect(on).toHaveBeenCalledWith('c');
+    fire.click(tabs[0]);
+    expect(on).toHaveBeenLastCalledWith('a');
   });
   it('Tooltip 은 머문 뒤에 뜬다', () => {
     vi.useFakeTimers();

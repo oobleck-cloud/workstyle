@@ -27,6 +27,19 @@ export {
   type BadgeTone,
   type MenuItemProps,
 } from './parts';
+export {
+  Segment,
+  Stepper,
+  Status,
+  Tab,
+  Tabs,
+  type ChoiceOption,
+  type SegmentProps,
+  type StepperProps,
+  type StatusTone,
+  type TabProps,
+  type TabsProps,
+} from './controls';
 export { Select, type SelectOption, type SelectProps } from './Select';
 export { Tooltip, type TooltipProps } from './Tooltip';
 export { ICONS, type IconName } from '../icons';
